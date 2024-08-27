@@ -2,6 +2,7 @@
 from GuessGame import GuessGame
 from MemoryGame import MemoryGame
 from CurrencyRouletteGame import CurrencyRouletteGame
+from Score import add_score
 
 #
 #  This function has a person name as an input and returns a string in the following layout:
@@ -36,7 +37,8 @@ def load_game():
             result = CurrencyRouletteGame(level).play()
     print (f"game result\n")
     if result:
-         print(f"+1")
+         print("+1")
+         add_score(level)
     else:
          print("-1")
    
