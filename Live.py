@@ -1,4 +1,8 @@
 
+from GuessGame import GuessGame
+from MemoryGame import MemoryGame
+from CurrencyRouletteGame import CurrencyRouletteGame
+
 #
 #  This function has a person name as an input and returns a string in the following layout:
 #
@@ -23,5 +27,17 @@ def load_game():
             level = int(input("Please choose game difficulty level 1-5: "))
             if level >=1 and level <= 5:
                 break
+    match game:
+        case 1:
+            result = MemoryGame(level).play()
+        case 2:
+            result = GuessGame(level).play()
+        case 3:
+            result = CurrencyRouletteGame(level).play()
+    print (f"game result\n")
+    if result:
+         print(f"+1")
+    else:
+         print("-1")
    
     return game, level
