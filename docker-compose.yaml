@@ -1,0 +1,6 @@
+services:
+  web:
+    build: .
+    image: finalproject:latest
+    ports:
+      - "8777:8777"
