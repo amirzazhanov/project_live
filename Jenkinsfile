@@ -1,6 +1,6 @@
 pipeline {
-    agent any
-    
+    agent { label 'build' }
+
     stages {
         stage("Checkout Repository") {
             steps {
