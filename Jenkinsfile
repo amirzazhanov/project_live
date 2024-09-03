@@ -13,7 +13,7 @@ pipeline {
         stage("Build") {
             steps {
                 script {
-                    sh "docker compose build"
+                    bat "docker compose build"
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
         stage("Run Container") {
             steps {
                 script {
-                    sh "docker compose up -d"
+                    bat "docker compose up -d"
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
         stage("Stop Container") {
             steps {
                 script {
-                    sh "docker compose down"
+                    bat "docker compose down"
                 }
             }
         }
